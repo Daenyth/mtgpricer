@@ -3,7 +3,8 @@
 from . import pricer
 
 class Deck(object):
-    def __init__(self, maindeck, sideboard):
+    def __init__(self, name, maindeck, sideboard):
+        self.name = name
         self.maindeck = [Card(c) for c in maindeck]
         self.sideboard = [Card(c) for c in sideboard]
 
