@@ -11,10 +11,11 @@ class Deck(object):
     def __len__(self):
         return len(self.cardlist)
 
+    @property
     def cardlist(self):
         return self.maindeck + self.sideboard
 
-    def price(self, proxy_count):
+    def price(self, proxy_count=0):
         unproxied_count = len(self) - proxy_count
         return sum(sorted([c.price for c in self.cardlist])[:unproxied_count])
 
