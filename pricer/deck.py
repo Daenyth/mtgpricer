@@ -29,6 +29,9 @@ class Card(object):
         self.name = cardname
         self._price = None
 
+    def __repr__(self):
+        return '<Card(%s)>' % self.name
+
     @property
     def price(self):
         if self._price is None:
