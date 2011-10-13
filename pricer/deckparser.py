@@ -9,7 +9,7 @@ def parse_deck(filename):
     deckname = None
     maindeck = []
     sideboard  = []
-    with open(filename) as f:
+    with open(filename, 'rU') as f:
         for line in f:
             line = line.strip()
             if not line:
